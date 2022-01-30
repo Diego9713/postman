@@ -1,0 +1,1363 @@
+{
+	"info": {
+		"_postman_id": "92473b11-f9e3-40f7-87dc-cad30d9fe4c7",
+		"name": "Bootcamp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Customer-apiGateway",
+			"item": [
+				{
+					"name": "Find All Customer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://20.127.248.66:8081/api/v1/customers",
+							"protocol": "http",
+							"host": [
+								"20",
+								"127",
+								"248",
+								"66"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find One Customer",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/customers/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"customers",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "61edff9c97c3514dbee5f8b5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Customer For DNI",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/v1/customers/documentnumber/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"customers",
+								"documentnumber",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "856932541"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Customer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"documentType\": \"dni\",\n        \"documentNumber\": \"5874632485\",\n        \"customerType\": \"business\",\n        \"firstName\": \"Ruth\",\n        \"lastName\": \"martinez\",\n        \"address\": \"limatambo norte\",\n        \"references\": \"videna\",\n        \"phoneNumber\": \"856256225\",\n        \"civilStatus\": \"soltero\",\n        \"email\": \"tafur232@gmail.com\",\n        \"status\": \"ACTIVE\",\n        \"owner\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Customer",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"documentType\": \"dni\",\n\"documentNumber\": \"856932541\",\n\"customerType\": \"PERSONAL\",\n\"firstName\": \"Juan\",\n\"lastName\": \"Leon\",\n\"address\": \"limatambo norte\",\n\"references\": \"leticia\",\n\"phoneNumber\": \"856256225\",\n\"civilStatus\": \"soltero\",\n\"email\": \"tafur232@gmail.com\",\n\"owner\": true,\n\"status\": \"ACTIVE\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/customers/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"customers",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "61edff9c97c3514dbee5f8b5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Customer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/customers/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"customers",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "61edff9c97c3514dbee5f8b5"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product-apiGateway",
+			"item": [
+				{
+					"name": "Find All Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://20.127.248.66:8081/api/v1/products",
+							"protocol": "http",
+							"host": [
+								"20",
+								"127",
+								"248",
+								"66"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find One Product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/v1/products/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "61ee025a426aab09782e10d3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Product For Account",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/v1/products/accountnumber/:account",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"accountnumber",
+								":account"
+							],
+							"variable": [
+								{
+									"key": "account",
+									"value": "45fca7df-9c56-46aa-a333-3a272df1be8b"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Product For Customer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/v1/products/customer/:customerId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"customer",
+								":customerId"
+							],
+							"variable": [
+								{
+									"key": "customerId",
+									"value": "61edff6e97c3514dbee5f8b4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Products For Account Type And Date",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/v1/products/accounttype/:accounttype?from=2022-01-15&until=2022-01-28",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"accounttype",
+								":accounttype"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "2022-01-15"
+								},
+								{
+									"key": "until",
+									"value": "2022-01-28"
+								}
+							],
+							"variable": [
+								{
+									"key": "accounttype",
+									"value": "saving"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Average For Customer And Date",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/v1/products/averagedailydalance/:customerId?date=2022-01-23",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"averagedailydalance",
+								":customerId"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2022-01-23"
+								}
+							],
+							"variable": [
+								{
+									"key": "customerId",
+									"value": "61ee000297c3514dbee5f8b9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"accountType\":\"current\",\n    \"minimumAverageAmount\":0,\n    \"averageDailyBalance\":0,\n    \"amount\": 5000,\n    \"maintenanceCommission\":100.00,\n    \"maintenanceCommissionDay\":null,\n    \"maxTransactNumber\": 10,\n    \"transactNumberDay\": null,\n    \"creditLimit\": 0,\n    \"currency\": \"PEN\",\n    \"customer\":\"61ee000297c3514dbee5f8b9\"\n    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://20.127.248.66:8081/api/v1/products",
+							"protocol": "http",
+							"host": [
+								"20",
+								"127",
+								"248",
+								"66"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register Product with Customer Business",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/v1/products/registercustomer?subaccount=c58d51ec-7bfa-4d6b-bf2c-6d5bb3303e82 - 2&dni=5874632485",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"registercustomer"
+							],
+							"query": [
+								{
+									"key": "subaccount",
+									"value": "c58d51ec-7bfa-4d6b-bf2c-6d5bb3303e82 - 2"
+								},
+								{
+									"key": "dni",
+									"value": "5874632485"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Product",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"accountType\": \"CREDIT\",\n    \"accountNumber\": \"080bffcf-4e8c-4c43-b714-c23b3b110f3c\",\n    \"subAccountNumber\": \"080bffcf-4e8c-4c43-b714-c23b3b110f3c - 2\",\n    \"level\": 2,\n    \"currency\": \"PEN\",\n    \"amount\": 0,\n    \"maintenanceCommission\": 0.0,\n    \"maintenanceCommissionDay\": null,\n    \"maxTransactNumber\": -1,\n    \"transactNumberDay\": [\n        2022,\n        1,\n        23\n    ],\n    \"creditLimit\": 1000.0,\n    \"customer\": \"61ee040697c3514dbee5f8ba\",\n    \"status\": \"ACTIVE\",\n    \"createdAt\": [\n        2022,\n        1,\n        23\n    ],\n    \"createdBy\": null,\n    \"updateAt\": [\n        2022,\n        1,\n        23\n    ],\n    \"updateBy\": null,\n    \"expiredDate\": [\n        2023,\n        1,\n        23\n    ],\n    \"minimumAverageAmount\": 0.0,\n    \"averageDailyBalance\": 8000.0,\n    \"averageDailyBalanceDay\": [\n        2022,\n        1,\n        23\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/products/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "61ee0432426aab09782e10db"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Generate average",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/v1/products/generate/:productId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"generate",
+								":productId"
+							],
+							"variable": [
+								{
+									"key": "productId",
+									"value": "61ee056e426aab09782e10e5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/v1/products/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "61db64d731dec743727907f3"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Transaction-apiGateway",
+			"item": [
+				{
+					"name": "Find All Transaction",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/v1/transactions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"transactions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find One Transaction",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/v1/transactions/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"transactions",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "61e22fec71f7364cf6699010"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Transaction For Product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/v1/transactions/product/:productId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"transactions",
+								"product",
+								":productId"
+							],
+							"variable": [
+								{
+									"key": "productId",
+									"value": "61db64ee31dec743727907f4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Commission For Date",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/v1/transactions/commission/:productId?from=2022-01-12&until=2022-01-16",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"transactions",
+								"commission",
+								":productId"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "2022-01-12"
+								},
+								{
+									"key": "until",
+									"value": "2022-01-16"
+								}
+							],
+							"variable": [
+								{
+									"key": "productId",
+									"value": "61e227625d25ae573005e635"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Top 10 For Product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/v1/transactions/product/:productId/limit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"transactions",
+								"product",
+								":productId",
+								"limit"
+							],
+							"variable": [
+								{
+									"key": "productId",
+									"value": "61e87f9c3b7fe02899bb5deb"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Transaction For Debits",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\":\"61ee04c3426aab09782e10dd\",\r\n    \"transactionType\":\"WITHDRAWAL\",\r\n    \"paymentMethod\":\"DIRECT\",\r\n    \"transactionAmount\":5000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/transactions/debits",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"transactions",
+								"debits"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Transaction For Credits",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\":\"61ee04b2426aab09782e10dc\",\r\n    \"transactionType\":\"CHARGE\",\r\n    \"paymentMethod\":\"DIRECT\",\r\n    \"transactionAmount\":5000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/transactions/credits",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"transactions",
+								"credits"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Transferer Debits",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fromProduct\":\"61ee025a426aab09782e10d3\",\r\n    \"productId\":\"61ee038a426aab09782e10d7\",\r\n    \"transactionType\":\"TRANSFER\",\r\n    \"paymentMethod\":\"TRANSFER\",\r\n    \"transactionAmount\":500\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/transactions/debits/transfer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"transactions",
+								"debits",
+								"transfer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Coin Purse and send message with kafka.",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fromProduct\":\"61f1b44aaf0cb800363bb886\",\r\n    \"productId\":\"61f1b369af0cb800363bb885\",\r\n    \"transactionType\":\"TRANSFER\",\r\n    \"paymentMethod\":\"COIN_PURSE\",\r\n    \"transactionAmount\":10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/transactions/coinpurse",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"transactions",
+								"coinpurse"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Transaction Debits",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\":\"61ee025a426aab09782e10d3\",\r\n    \"transactionType\":\"WITHDRAWAL\",\r\n    \"paymentMethod\":\"DIRECT\",\r\n    \"transactionAmount\":500\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/transactions/debits/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"transactions",
+								"debits",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "61eeb1863299ba07361210eb"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Transaction Credits",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\":\"61e8885c1307364ad18ba807\",\r\n    \"transactionType\":\"charge\",\r\n    \"paymentMethod\":\"DIRECT\",\r\n    \"transactionAmount\":150\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/transactions/credits/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"transactions",
+								"credits",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "61e9cc0e517fbb7ff9a381a1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Transaction For Coin Purse",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fromProduct\":\"61f1b44aaf0cb800363bb886\",\r\n    \"productId\":\"61f1b369af0cb800363bb885\",\r\n    \"transactionType\":\"TRANSFER\",\r\n    \"paymentMethod\":\"COIN_PURSE\",\r\n    \"transactionAmount\":30\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/transactions/coinpurse/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"transactions",
+								"coinpurse",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "61f2cd1e2280f54d2a1bcf94"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Transaction Debits",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/v1/transactions/debits/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"transactions",
+								"debits",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "61eb3e3a58149367ba3676ec"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Transaction Credits",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/v1/transactions/credits/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"transactions",
+								"credits",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "61eeb33c3299ba07361210ef"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Transaction For Coin Purse",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/v1/transactions/coinpurse/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"transactions",
+								"coinpurse",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "61f2b69eb8c2a828aee6ea0f"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Card-apiGateway",
+			"item": [
+				{
+					"name": "Find All Cards",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/v1/cards",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"cards"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find One Card",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/v1/cards/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"cards",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "61eeaf6aaf3be06ead7cc305"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Balance Card Number",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/v1/cards/balance/:cardNumber",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"cards",
+								"balance",
+								":cardNumber"
+							],
+							"variable": [
+								{
+									"key": "cardNumber",
+									"value": "f1605f7d-a58e-4f11-8aef-7b9ac52a83fe"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Card",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\":\"61ee055f426aab09782e10e4\",\r\n    \"cardType\":\"VISA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/cards",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"cards"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Card",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\": \"61ee025a426aab09782e10d3\",\r\n    \"cardType\": \"MASTERCARD\",\r\n    \"status\": \"ACTIVE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/cards/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"cards",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "61eeaf6aaf3be06ead7cc305"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Card",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/cards/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"cards",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "61eb36761a73cd22e69c3a6a"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Yanki-apiGateway",
+			"item": [
+				{
+					"name": "Find All Coin Purse",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/v1/yankis",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"yankis"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find One Coin Purse",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/v1/yankis/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"yankis",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "61f1b369af0cb800363bb885"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Coin Purse",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"coinPurseType\":\"COIN_PURSE_CARD\",\r\n    \"documentType\": \"dni\",\r\n    \"documentNumber\": \"1234785481234\",\r\n    \"firstName\": \"Pablo\",\r\n    \"lastName\": \"Escobar\",\r\n    \"phoneNumber\": \"8562562251224\",\r\n    \"phoneImei\":\"845985445TMJS123154\",\r\n    \"email\": \"tafur232@gmail.com\",\r\n    \"accountNumber\": \"45fca7df-9c56-46aa-a333-3a272df1be8b4\",\r\n    \"status\": \"ACTIVE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/yankis",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"yankis"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Coin Purse",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"documentType\": \"dni\",\r\n        \"documentNumber\": \"123478548123\",\r\n        \"coinPurseType\": \"COIN_PURSE_DNI\",\r\n        \"firstName\": \"Pablo\",\r\n        \"lastName\": \"Escobar\",\r\n        \"phoneNumber\": \"85625622512\",\r\n        \"phoneImei\": \"845985445TMJS1231\",\r\n        \"email\": \"tafur232@gmail.com\",\r\n        \"accountNumber\": null,\r\n        \"amount\": 0.0,\r\n        \"status\": \"ACTIVE\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/yankis/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"yankis",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "61f1b44aaf0cb800363bb886"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Coin Purse",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/v1/yankis/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"yankis",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
