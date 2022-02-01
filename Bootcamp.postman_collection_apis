@@ -287,10 +287,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8081/api/v1/products/customer/:customerId",
+							"raw": "http://20.127.248.66:8081/api/v1/products/customer/:customerId",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"20",
+								"127",
+								"248",
+								"66"
 							],
 							"port": "8081",
 							"path": [
@@ -355,10 +358,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8081/api/v1/products/averagedailydalance/:customerId?date=2022-01-23",
+							"raw": "http://20.127.248.66:8081/api/v1/products/averagedailydalance/:customerId?date=2022-01-28",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"20",
+								"127",
+								"248",
+								"66"
 							],
 							"port": "8081",
 							"path": [
@@ -371,13 +377,13 @@
 							"query": [
 								{
 									"key": "date",
-									"value": "2022-01-23"
+									"value": "2022-01-28"
 								}
 							],
 							"variable": [
 								{
 									"key": "customerId",
-									"value": "61ee000297c3514dbee5f8b9"
+									"value": "61edff6e97c3514dbee5f8b4"
 								}
 							]
 						}
@@ -492,10 +498,13 @@
 						"method": "PUT",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8081/api/v1/products/generate/:productId",
+							"raw": "http://20.127.248.66:8081/api/v1/products/generate/:productId",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"20",
+								"127",
+								"248",
+								"66"
 							],
 							"port": "8081",
 							"path": [
@@ -508,7 +517,7 @@
 							"variable": [
 								{
 									"key": "productId",
-									"value": "61ee056e426aab09782e10e5"
+									"value": "61ee025a426aab09782e10d3"
 								}
 							]
 						}
@@ -603,10 +612,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8081/api/v1/transactions/product/:productId",
+							"raw": "http://20.127.248.66:8081/api/v1/transactions/product/:productId",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"20",
+								"127",
+								"248",
+								"66"
 							],
 							"port": "8081",
 							"path": [
@@ -619,7 +631,7 @@
 							"variable": [
 								{
 									"key": "productId",
-									"value": "61db64ee31dec743727907f4"
+									"value": "61ee025a426aab09782e10d3"
 								}
 							]
 						}
@@ -632,7 +644,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8081/api/v1/transactions/commission/:productId?from=2022-01-12&until=2022-01-16",
+							"raw": "http://localhost:8081/api/v1/transactions/commission/:productId?from=2022-01-12&until=2022-01-30",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -652,13 +664,13 @@
 								},
 								{
 									"key": "until",
-									"value": "2022-01-16"
+									"value": "2022-01-30"
 								}
 							],
 							"variable": [
 								{
 									"key": "productId",
-									"value": "61e227625d25ae573005e635"
+									"value": "61ee025a426aab09782e10d3"
 								}
 							]
 						}
@@ -796,7 +808,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"fromProduct\":\"61f1b44aaf0cb800363bb886\",\r\n    \"productId\":\"61f1b369af0cb800363bb885\",\r\n    \"transactionType\":\"TRANSFER\",\r\n    \"paymentMethod\":\"COIN_PURSE\",\r\n    \"transactionAmount\":10\r\n}",
+							"raw": "{\r\n    \"fromProduct\":\"61f1b44aaf0cb800363bb886\",\r\n    \"productId\":\"61f1b369af0cb800363bb885\",\r\n    \"transactionType\":\"TRANSFER\",\r\n    \"paymentMethod\":\"COIN_PURSE\",\r\n    \"transactionAmount\": 15\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -815,6 +827,38 @@
 								"v1",
 								"transactions",
 								"coinpurse"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Transaferer with Boot Coins",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fromProduct\":\"61f5a0854eb8f93a24b19d44\",\r\n    \"productId\":\"61f98d43bd24fe2651dedc98\",\r\n    \"transactionType\":\"TRANSFER\",\r\n    \"paymentMethod\":\"BOOT_COINS\",\r\n    \"transactionAmount\":200\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/transactions/coinpurse/buybootcoins",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"transactions",
+								"coinpurse",
+								"buybootcoins"
 							]
 						}
 					},
@@ -1263,13 +1307,43 @@
 					"response": []
 				},
 				{
+					"name": "Yankis Transaction pending",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/v1/yankis/status/transactions/:yankiId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"yankis",
+								"status",
+								"transactions",
+								":yankiId"
+							],
+							"variable": [
+								{
+									"key": "yankiId",
+									"value": "61f98d43bd24fe2651dedc98"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Create Coin Purse",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"coinPurseType\":\"COIN_PURSE_CARD\",\r\n    \"documentType\": \"dni\",\r\n    \"documentNumber\": \"1234785481234\",\r\n    \"firstName\": \"Pablo\",\r\n    \"lastName\": \"Escobar\",\r\n    \"phoneNumber\": \"8562562251224\",\r\n    \"phoneImei\":\"845985445TMJS123154\",\r\n    \"email\": \"tafur232@gmail.com\",\r\n    \"accountNumber\": \"45fca7df-9c56-46aa-a333-3a272df1be8b4\",\r\n    \"status\": \"ACTIVE\"\r\n}",
+							"raw": "{\r\n    \"coinPurseType\":\"COIN_PURSE_DNI\",\r\n    \"documentType\": \"dni\",\r\n    \"documentNumber\": \"78546982\",\r\n    \"firstName\": \"Fernando\",\r\n    \"lastName\": \"Ramirez\",\r\n    \"phoneNumber\": \"78215452121\",\r\n    \"phoneImei\":\"84575285445TMJS1234\",\r\n    \"email\": \"tafur232@gmail.com\",\r\n    \"accountNumber\": \"\",\r\n    \"amount\":\"1000\",\r\n    \"status\": \"ACTIVE\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1287,6 +1361,38 @@
 								"api",
 								"v1",
 								"yankis"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Confirm Transaction Pending",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": \"61f98f57648d9050a853efd8\",\r\n        \"productId\": \"61f98d43bd24fe2651dedc98\",\r\n        \"fromProduct\": \"61f1b44aaf0cb800363bb886\",\r\n        \"paymentMethod\": \"BOOT_COINS\",\r\n        \"transactionType\": \"TRANSFER\",\r\n        \"transactionAmount\": 200.0\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/yankis/confirm/transactions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"yankis",
+								"confirm",
+								"transactions"
 							]
 						}
 					},
